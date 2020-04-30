@@ -1,0 +1,8 @@
+<form bindsubmit="formSubmit"  class="comment">
+    <view class="section">
+        <input name="input" placeholder="请输入评论内容" />
+    </view>
+    <view class="btn-area">
+        <button formType="submit" >提交</button>
+    </view>
+</form>

@@ -1,0 +1,98 @@
+{{extend './../common/share.art'}}
+
+{{block 'main'}}
+<!-- 头部 -->
+{{include './../common/header.art'}}
+<!-- /头部 -->
+<!-- 主体内容 -->
+<div class="content">
+    <!-- 侧边栏 -->
+    {{include './../common/aside.art'}}
+    <!-- 侧边栏 -->
+    <div class="main">
+        <!-- 分类标题 -->
+        <div class="title">
+            <h4 style="display: {{button == '添加' ? 'block' : 'none'}}">添加电影信息</h4>
+            <h4 style="display: {{button == '修改' ? 'block' : 'none'}}">修改：{{@movie && movie.moviename}}</h4>
+            <p class="tips">{{message}}</p>
+        </div>
+        <!-- /分类标题 -->
+        <!-- enctype 指定表单数据编码类型
+        enctype 指定表单数据的编码类型
+        application/x-www-form-urlencoded
+        name = zhangsan&age=20
+        multipart/form-data 将表单数据编码成二进制
+        -->
+        <form enctype="multipart/form-data" class="form-container" action="{{link}}" method="post">
+            <div class="form-group">
+                <label>电影名</label>
+                <input type="text" class="form-control" placeholder="请输入电影名" name="moviename">
+            </div>
+            <div class="form-group">
+                <label>导演</label>
+                <input type="text" class="form-control" placeholder="请输入导演名" name="author">
+            </div>
+            <div class="form-group">
+                <label>发布时间</label>
+                <input type="date" class="form-control" name=date>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputFile">电影封面</label>
+                <!-- multiple允许用户一次选择多个文件 -->
+                <input type="file" name="cover" id="file">
+                <div class="thumbnail-waper">
+                    <img class="img-thumbnail" src="" id="proview">
+                </div>
+            </div>
+            <div class="form-group">
+                <label>电影简介</label>
+                <textarea class="form-control" id="editor" name="content"></textarea>
+            </div>
+            <div class="buttons">
+                <input value="{{button}}" type="submit" class="btn btn-primary">
+            </div>
+        </form>
+
+    </div>
+</div>
+<!-- /主体内容 -->
+{{/block}}
+
+{{block 'script'}}
+<script src="/admin/lib/ckeditor5/ckeditor.js"></script>
+<script type="text/javascript">
+    let editor;
+
+    ClassicEditor
+        .create(document.querySelector('#editor'))
+        .then(newEditor => {
+            editor = newEditor;
+        })
+        .catch(error => {
+            console.error(error);
+        });
+
+    // 获取数据
+    // const editorData = editor.getData();
+
+    // 选择文件上传控件
+    var file = document.querySelector('#file');
+    var proview = document.querySelector('#proview');
+    // 当用户选择完文件以后
+    file.onchange = function () {
+        // 1 创建文件读取对象
+        var reader = new FileReader();
+        // 用户选择的文件列表
+        // console.log(this.files[0])
+        // 2 读取文件
+        reader.readAsDataURL(this.files[0]);
+        // 3 监听onload事件
+        reader.onload = function () {
+            // console.log(reader.result)
+            // 将文件读取的结果显示在页面中
+            proview.src = reader.result;
+        }
+    }
+</script>
+{{/block}}

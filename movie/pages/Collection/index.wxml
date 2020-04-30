@@ -1,0 +1,13 @@
+<view class="myLike" wx:if="{{log}}">
+    <text class="like-tit">我的收藏：</text>
+    <view>
+        <navigator wx:for="{{collect}}" wx:key="name" class="index-list" url="/pages/show/index?id={{item._id}}">
+            <image src="http://localhost{{item.cover}}" class="movie-img" mode="aspectFit" lazy-load="false" binderror="" bindload=""></image>
+            <view class="list-cate">
+                <text class="movie-name">{{item.moviename}}</text>
+                <text class="movie-rating">{{item.mark}}</text>
+            </view>
+        </navigator>
+    </view>
+</view>
+<navigator url="/pages/login/index" class="log" wx:else>请先登陆</navigator>

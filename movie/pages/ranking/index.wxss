@@ -1,0 +1,41 @@
+
+.ranking_list {
+  background-color: #F5F5F5;
+  height: 100%;
+}
+.ranking_list .list_title {
+  background-color: #FFE4E1;
+  font-size: 40rpx;
+  color: #808080;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #808080;
+}
+.ranking_list .list_title text:nth-last-child(n-3) {
+  padding-left: 30rpx;
+}
+.ranking_list .list_title text:nth-child(4) {
+  float: right;
+  padding-right: 40rpx;
+}
+.ranking_list .list_content {
+  font-size: 35rpx;
+}
+.ranking_list .list_content navigator {
+  padding: 30rpx 0;
+  border-bottom: 1px dotted #CCCCCC;
+}
+.ranking_list .list_content navigator .change {
+  color: red;
+  font-weight: bold;
+}
+.ranking_list .list_content navigator text:nth-child(1) {
+  padding-left: 57rpx;
+}
+.ranking_list .list_content navigator text:nth-child(2) {
+  padding-left: 100rpx;
+}
+.ranking_list .list_content navigator text:nth-child(3) {
+  float: right;
+  padding-right: 63rpx;
+}

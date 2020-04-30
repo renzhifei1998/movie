@@ -1,0 +1,15 @@
+
+<view class="user-ifo-wrap">
+    <view wx:if="{{userinfo.avatarUrl}}" class="user-img-wrap">
+        <image class="user-bg" src="{{userinfo.avatarUrl}}"></image>
+        <view class="user-info">
+            <image class="user-icon" src="{{userinfo.avatarUrl}}"></image>
+            <view class="user-name">{{userinfo.nickName}}</view>
+        </view>
+    </view>
+    <view wx:else class="user-btn">
+        <navigator class="" target="" url="/pages/login/index" hover-class="navigator-hover" open-type="navigate">
+            登陆
+        </navigator>
+    </view>
+</view>

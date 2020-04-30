@@ -1,0 +1,61 @@
+.index_swiper swiper {
+  /* width: 750rpx;
+  height: 340rpx; */
+  width: 100%;
+  height: 400rpx;
+}
+
+.index_swiper swiper image {
+  width: 100%;
+}
+
+.index_cate {
+  display: flex;
+  background-color:	#FFF0F5
+}
+
+.index_cate navigator {
+  padding: 20rpx;
+  flex: 1;
+}
+
+.index_cate navigator image {
+  width: 70%;
+  padding-left: 40rpx;
+}
+
+
+
+.index-list{
+  display: flex;
+  padding:20rpx ;
+}
+.movie-img{
+  width: 128rpx;
+  height: 128rpx;
+  overflow: hidden;
+}
+.list-cate{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 20rpx;
+}
+.movie-name{
+  font-size: 32rpx;
+  color: #000;
+}
+.movie-year{
+  font-size: 28rpx;
+  color: #666;
+  margin: 8rpx 0;
+}
+.movie-director{
+  font-size: 30rpx;
+  color: #333;
+}
+.movie-rating{
+  font-size: 40rpx;
+  color: red;
+  font-weight: bold;
+}

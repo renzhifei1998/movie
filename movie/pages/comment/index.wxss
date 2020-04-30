@@ -1,0 +1,17 @@
+/* pages/search/index.wxss */
+page {
+  background-color: #dedede;
+  padding: 20rpx;
+}
+.comment {
+  display: flex;
+  flex-direction: column;
+}
+.comment input {
+  background-color: #fff;
+  height: 200rpx;
+  padding-left: 30rpx;
+}
+.comment button {
+  margin-top: 20rpx;
+}

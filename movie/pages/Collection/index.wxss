@@ -1,0 +1,57 @@
+.like-tit {
+  display: block;
+  margin: 20rpx 0 20rpx 10rpx;
+  font-size: 40rpx;
+
+}
+
+.index-list {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1px solid dimgrey;
+}
+
+.movie-img {
+  width: 128rpx;
+  height: 128rpx;
+  overflow: hidden;
+}
+
+.list-cate {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 20rpx;
+  position: relative;
+}
+
+.movie-name {
+  position: absolute;
+  top: 30%;
+  font-size: 32rpx;
+  color: #000;
+}
+
+.movie-rating {
+  position: absolute;
+  top: 30%;
+  right: 5%;
+  font-size: 40rpx;
+  color: red;
+  font-weight: bold;
+}
+
+.log {
+  width: 180rpx;
+  height: 120rpx;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20%;
+  border: 1rpx solid red;
+  color: red;
+  font-size: 38rpx;
+  border-radius: 10rpx;
+  padding: 15rpx;
+  box-shadow: 0px 20px 10px rgba(192, 30, 30, 0.9)
+}

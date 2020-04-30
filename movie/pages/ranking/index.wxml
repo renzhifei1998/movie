@@ -1,0 +1,22 @@
+<view class="ranking_index">
+  <!-- 搜索框 开始 -->
+  <SearchInput></SearchInput>
+  <!-- 搜索框 结束 -->
+  <!-- 列表开始 -->
+  <view class="ranking_list">
+    <view class="list_title" hover-class="none" hover-stop-propagation="false">
+      <text class="">排名</text>
+      <text class="">|</text>
+      <text class="">电影名称</text>
+      <text class="">票数</text>
+    </view>
+    <view class="list_content" hover-class="none" hover-stop-propagation="false">
+      <navigator wx:for="{{rankList}}" wx:key="{{item._id}}" url="/pages/show/index?id={{item._id}}" wx:for-index="index">
+        <text class="{{index<3?'change':''}}">{{index+1}}</text>
+        <text class="">{{item.moviename}}</text>
+        <text class="">{{item.mark}}</text>
+      </navigator>
+    </view>
+  </view>
+  <!-- 列表结束 -->
+</view>

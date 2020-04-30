@@ -1,0 +1,139 @@
+/* pages/show/index.wxss */
+.show .header .header-left {
+  padding: 30rpx 0;
+  background-color: Silver;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.show .header .header-left text {
+  font-size: 40rpx;
+  color: #eb4450;
+  font-weight: bold;
+}
+.show .centent .centent-header {
+  position: relative;
+}
+.show .centent .centent-header text {
+  display: block;
+  font-size: 35rpx;
+  font-weight: 700;
+  padding: 30rpx 30rpx;
+}
+.show .centent .centent-header text:nth-child(1) {
+  margin-left: 20rpx;
+}
+.show .centent .centent-header text:nth-child(2) {
+  position: absolute;
+  right: 20rpx;
+  top: 0;
+}
+.show .centent .centent-header .centent-info {
+  overflow: hidden;
+  position: absolute;
+  top: 50rpx;
+}
+.show .centent .centent-header .centent-info text {
+  font-size: 30rpx;
+  font-weight: lighter;
+  float: left;
+  position: relative;
+}
+.show .centent .centent-header .centent-info text:nth-child(1) {
+  color: #ff7300;
+}
+.show .centent-major {
+  padding-top: 50rpx;
+}
+.show .centent-major text {
+  display: block;
+}
+.show .centent-major text:nth-child(2) {
+  padding-left: 30rpx;
+  color: #ff7300;
+}
+.show .centent-major text:nth-child(3) {
+  text-align: center;
+  padding: 30rpx 30rpx;
+}
+.show .comment .comment-title {
+  padding: 10rpx;
+  font-size: 28rpx;
+}
+.show .comment .comment-list .comment-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-bottom: 10rpx;
+  padding: 10rpx;
+  border-bottom: 1px solid #666;
+}
+.show .comment .comment-list .comment-item .comment-datail {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10rpx;
+}
+.show .comment .comment-list .comment-item .comment-datail .author {
+  font-weight: 900;
+  font-size: 28rpx;
+  color: #000;
+}
+.show .comment .comment-list .comment-item .comment-datail .date {
+  color: #666;
+  font-size: 24rpx;
+}
+.show .comment .comment-list .comment-item .comment-content {
+  font-size: 28rpx;
+  color: #000000;
+}
+.show .change {
+  display: flex;
+  justify-content: space-around;
+  margin: 30rpx 0;
+}
+.show .change .scys {
+  display: flex;
+  justify-content: center;
+  font-size: 40rpx;
+  color: #666666;
+  border: 1px solid #666;
+  background-color: #CCCCCC;
+  border-radius: 10rpx;
+  width: 180rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.show .change .tpys {
+  display: flex;
+  justify-content: center;
+  font-size: 40rpx;
+  color: #666666;
+  border: 1px solid #666;
+  background-color: #CCCCCC;
+  border-radius: 10rpx;
+  width: 180rpx;
+  height: 60rpx;
+}
+.show .change .icon-shoucang-not11 {
+  color: red;
+}
+@font-face {
+  font-family: "iconfont";
+  src: url('iconfont.eot?t=1588082302905');
+  /* IE9 */
+  src: url('iconfont.eot?t=1588082302905#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAMYAAsAAAAABzAAAALJAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqCDIISATYCJAMMCwgABCAFhG0HRBtmBsgekiQIEQEFAKrwG4Q4Hh7H2vvbznBL4o1ukiCJRrwRGo0EsVE6He/U+z///O57+dTCs6o+yIoc5UWTnUyWqPZsmWoB1WCH6mGhjqjTCDuA0haOqU/xnP3tVEkVhZV0uuBBo4JO9oscxD+MXeASjhNoMSGPttnRNwgJCmtcIB4MPgcJOYXSkh7qQrVmaRGvEKuenvWnwEv4/fhTEnWSSmZNPbhqJ9D0oX+8cO2OZtJHAG8+HdgqMhaBQlzWGo654sAilxZNHKPng6oipLnc0SghV5dXd/rHS0SVldoGZqEr8eGSCb6mVkggg2oc2geeELZvm5BGly3Z9tisu2t3mOagZeU7dOsjBxedd0aud2vb1dePmeaFM5fs4Wv2GscZeWLV33M6LWvohJnXuvYELW9sdLc94dEPHdYVtC7hSH/4135d8zX390l0JA9rrbpq6Bh0vCruzd7s/dMPP9y+c7YPbygeWwb8Zse01ox7U1Lwpc3Tmn8H8LGKKZgFaH7I9/Pa8Bcagv/lazNm0uv+01rA+/ORncDe/FCgv0r9/ozB/+b1rCm6wFLmonJdrmnKlkfqEpDNzZpgWXq8Gy/v7+0j1HM8BknNOGR1k8iCXYSKVstQVbcCLRZ0rm7VS3KJ0sC8AwBCl+uQdHiDrMszZMG+hYoB36GqKzK0OIzsLVtNx21Sq6RzihI0vwUZWASYo1ZJUXo/5WHfnMwKQtwwlSHDjYoLiorhThqgco4ZoY28RCmGmBR+1AFOoz6fQEEpPBSrArdSwZrCQlb3pgIs/JBkg0TNUSgCmbcFYsCEAOb3VpJKn+9HcWE+c2RLQY11GCWFGP0jxQoU9UB2SgO9Cu7llZCNuBKKwiCMJPghHUBH+eyAgATrB3lQmFLAPcIXVKMQNWJ9pQXry/0fkMNKsM7OkSJH0fHoFmE8F+D5AaGKixOz+mIAAAAA') format('woff2'), url('iconfont.woff?t=1588082302905') format('woff'), url('iconfont.ttf?t=1588082302905') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */ url('iconfont.svg?t=1588082302905#iconfont') format('svg');
+  /* iOS 4.1- */
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-shoucang-not11:before {
+  content: "\e502";
+}
+.icon-shoucang1:before {
+  content: "\e75d";
+}

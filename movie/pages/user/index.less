@@ -1,0 +1,48 @@
+/* pages/user/index.wxss */
+.user-ifo-wrap {
+    height: 45vh;
+    overflow: hidden;
+    background-color: #eb4450;    
+    position: relative;
+    .user-img-wrap {
+        position: relative;
+
+        .user-bg {
+            height: 50vh;
+            width: 100%;
+            //高斯模糊
+            filter: blur(10rpx);
+        }
+
+        .user-info {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20%;
+            text-align: center;
+
+            .user-icon {
+                width: 150rpx;
+                height: 150rpx;
+                border-radius: 50%;
+            }
+
+            .user-name {
+                color: #fff;
+                margin-top: 40rpx;
+                font-size: 40rpx;
+            }
+        }
+    }
+    .user-btn{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 20%;
+        border: 1rpx solid rgb(188, 231, 122);
+        color:rgb(188, 231, 122) ;
+        font-size: 38rpx;
+        padding: 30rpx;
+        border-radius: 10rpx;
+    }
+}

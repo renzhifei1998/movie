@@ -1,0 +1,38 @@
+<wxs module="tutil" src="../../utils/date.wxs"></wxs>
+<view class="shop_index">
+  <!-- 搜索框 开始 -->
+  <SearchInput></SearchInput>
+  <!-- 搜索框 结束 -->
+  <!-- 轮播图开始 -->
+  <view class="index_swiper">
+    <swiper interval="2000" indicator-color="#ffffff" indicator-active-color="red" autoplay="{{true}}" indicator-dots="{{true}}" circular="{{true}}">
+      <swiper-item wx:for="{{movieList}}" wx:key="id">
+        <navigator url="{{item.nav_url}}">
+          <image src="{{item.img}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 轮播图结束 -->
+  <!-- 导航开始 -->
+  <view class="index_cate">
+    <navigator wx:for="{{catesList}}" wx:key="name" target="" url="{{item.nav_url}}"  open-type="switchTab">
+      <image class="" src="{{item.image_src}}" mode="widthFix" lazy-load="false" binderror="" bindload=""></image>
+      <text class="cate-name">{{item.name}}</text>
+    </navigator>
+  </view>
+  <!-- 导航结束 -->
+  <!-- 列表开始 -->
+  <view>
+    <navigator wx:for="{{moviesList}}" wx:key="name" class="index-list" url="/pages/show/index?id={{item._id}}">
+      <image src="http://localhost{{item.cover}}" class="movie-img" mode="aspectFit" lazy-load="false" binderror="" bindload=""></image>
+      <view class="list-cate">
+        <text class="movie-name">{{item.moviename}}</text>
+                <text class="movie-director">导演:{{item.author}}</text>
+        <text class="movie-year">年份:{{tutil.formatTime(item.date)}}</text>
+      </view>
+      <!-- <text class="movie-rating">{{item.mark}}</text> -->
+    </navigator>
+  </view>
+  <!-- 列表结束 -->
+</view>
