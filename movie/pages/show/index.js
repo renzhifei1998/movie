@@ -61,7 +61,7 @@ Page({
     const com = await request({ url: "http://localhost/record/comment", data: idParams });
     this.MovieInfo = res.data
     console.log(res.data)
-    //获取商品收藏数组
+    //获取收藏数组
     let collect = wx.getStorageSync("collect") || [];
     //判断是否被收藏
     let isCollect = collect.some(v => v._id === this.MovieInfo._id);
